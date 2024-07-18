@@ -58,10 +58,9 @@ Finally, the last element in the vector is printed to the output file.
 Complexity: O(n)
 
 Couting (Numarare)
+
 For the topological sorting function, I used the implementation from the published solution of lab 6, with slight modifications.
-
 The number of nodes and edges of the graphs are read from the input file, and the two graphs are constructed. These two graphs are topologically sorted using the topologicalSort function. The dp vector is used to count the paths to each node, starting from node 1. The common paths are found as follows:
-
 Iterate through each node of the first graph in topological order.
 For each neighbor of the current node, check if it also exists in the second graph.
 If the neighbor is found in the second graph, update the number of paths to that neighbor using the modulo operation.
@@ -69,13 +68,12 @@ At the end, the last element of the dp vector, which contains the number of comm
 Complexity: O(m * (n + m))
 
 Trains (Trenuri)
-For the topological sorting function, I used the implementation from the published solution of lab 6, with slight modifications.
 
+For the topological sorting function, I used the implementation from the published solution of lab 6, with slight modifications.
 The source node, destination node, number of edges, and the edges themselves are read from the input file. As the edges are read, the graph is constructed. Additionally, a dictionary is declared to keep track of the in-degree of each node.
 The topologicalSort function is called to sort the nodes of the graph, and then the distance to each node is initialized to the smallest int value.
 The nodes sorted topologically are iterated through again to find the longest distance between the source node and the destination node: if the current node is accessible from the source, its neighbors are iterated through to check if the distance to the current neighbor can be increased, updating it if so.
 Finally, the maximum distance is written to the output file.
-
 Complexity: O(n + m)
 
 Mandatory Paths (Drumuri obligatorii)
